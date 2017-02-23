@@ -1,0 +1,45 @@
+<section class="hero is-info is-fullheight">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h1 class="title">
+        Vamos iniciar seu cadastro
+      </h1>
+      <h2 class="subtitle">
+        Selecione uma forma de login para iniciar
+      </h2>
+
+      <a><i class="fa fa-envelope"></i></a>&nbsp;&nbsp;&nbsp;
+      <a (click)="loginGithub()"><i class="fa fa-github"></i></a>&nbsp;&nbsp;&nbsp;
+      <a><i class="fa fa-google"></i></a>&nbsp;&nbsp;&nbsp;
+      <a><i class="fa fa-facebook"></i></a>
+    </div>
+  </div>
+</section>
+
+<div class="modal" id="register-modal">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">Finalizando seu cadastro...</p>
+      <button class="delete"></button>
+    </header>
+    <section class="modal-card-body">
+      <p class="control">
+        <input class="input is-large" type="text" placeholder="Nome" [(ngModel)]="user.firstName" disabled>
+      </p>
+      <p class="control">
+        <input class="input is-large" type="text" placeholder="Sobrenome" [(ngModel)]="user.lastName" disabled>
+      </p>
+      <p class="control">
+        <input class="input is-large" type="text" placeholder="E-mail" [(ngModel)]="user.email" disabled>
+      </p>
+      <p class="control">
+        <input class="input is-large" type="text" placeholder="CPF" [(ngModel)]="user.document">
+      </p>
+    </section>
+    <footer class="modal-card-foot">
+      <a class="button is-success" (click)="register()">Confirmar</a>
+      <a class="button">Cancelar</a>
+    </footer>
+  </div>
+</div>
